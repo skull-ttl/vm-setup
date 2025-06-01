@@ -13,7 +13,7 @@ sudo msfdb init || true    # 'true' allows script to continue if already initial
 sudo msfupdate
 echo "[*] Metasploit Framework and database are up to date."
 # Replace with your actual GitHub repo or raw .yaml link
-WORKSPACE_URL="https://raw.githubusercontent.com/<yourusername>/waveterm-config/main/ctf-default.yaml"
+WORKSPACE_URL="https://raw.githubusercontent.com/skull-ttl/vm-setup/main/ctf-default.yaml"
 echo "[*] Downloading WaveTerm CTF workspace config..."
 mkdir -p "$HOME/.waveterm/workspaces"
 wget -O "$HOME/.waveterm/workspaces/ctf-default.yaml" "$WORKSPACE_URL"
