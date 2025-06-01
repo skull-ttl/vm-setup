@@ -18,10 +18,14 @@ echo "[*] Downloading WaveTerm CTF workspace config..."
 mkdir -p "$HOME/.waveterm/workspaces"
 wget -O "$HOME/.waveterm/workspaces/ctf-default.yaml" "$WORKSPACE_URL"
 echo "[*] WaveTerm config placed in ~/.waveterm/workspaces/ctf-default.yaml"
-echo "[*] Installing Brew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-sudo apt install build-essential
-echo "[*] Brew Installation complete... remember to add to your shellenv"
+if [ "$EUID" -eq 0 ]; then
+    echo "[!] Homebrew cannot be installed as root. Please run the following as your normal user after this script:"
+    echo '    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+else
+    echo "[*] Installing Brew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo "[*] Brew Installation complete... remember to add to your shellenv"
+fi
 # ---- RustDesk Install ----
 echo "[*] Installing RustDesk..."
 RUSTDESK_VERSION=$(curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest | grep tag_name | cut -d '"' -f 4 | sed 's/v//g')
@@ -87,6 +91,7 @@ if [ "$tmpboolean" = "yes" ] || [ "$tmpboolean" = "y" ] || [ "$tmpboolean" = "ja
     echo ".."
     echo "..."
 fi
+sudo apt autoremove
 echo "installation finished"
 
 cat <<'EOF'
