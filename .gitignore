@@ -1,0 +1,96 @@
+# Ignore system junk
+.DS_Store
+Thumbs.db
+
+# Ignore log and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+*.bak
+
+# Ignore compiled binaries and archives
+*.exe
+*.dll
+*.out
+*.o
+*.so
+*.pyc
+*.pyo
+*.class
+*.jar
+*.deb
+*.rpm
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.gz
+
+# Ignore large wordlists & dumps (uncomment if you want to keep them out)
+AddWL/
+HugeWL/
+*.lst
+*.bin
+*.txt.7z
+*.txt.gz
+
+# Ignore private configs/secrets
+*.key
+*.pem
+*.crt
+*.asc
+*.gpg
+*.ovpn
+.env
+secrets/
+passwords/
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+
+# Ignore OS and editor cruft
+.idea/
+.vscode/
+*.code-workspace
+*.bak
+*.orig
+
+# Ignore macOS and Linux hidden files
+._*
+.svn/
+.cache/
+*.bak
+
+# Ignore CTF output artifacts
+output/
+loot/
+captures/
+captures/*
+*.pcap
+*.cap
+
+# Ignore downloaded tools and temporary setup folders
+pimpmykali/
+PrivEsc/
+Auto_Wordlists/
+pwned/
+wave_tmp/
+tmp/
+*.egg-info
+
+# Ignore WaveTerm workspace auto-backups
+*.bak.yaml
+
+# Allow your main scripts and config
+!*.sh
+!*.yaml
+!README.md
+
+# If you use a secrets or credentials template, only track the template
+!env.template
+
+# For your own reference: 
+# Never commit actual secrets, tokens, or creds! Review before each push.

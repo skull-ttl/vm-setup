@@ -1,0 +1,15 @@
+# WaveTerm workspace config for CTFs
+name: CTF Default
+theme: monaki
+
+blocks:
+  - title: Main CTF Shell
+    shell: bash
+    cmd:initscript: |
+      echo "[*] Welcome to your CTF environment."
+      echo "[*] Current PATH: $PATH"
+      # Example: activate your python venv or load common aliases
+      # source ~/ctf-venv/bin/activate
+      # source ~/.ctf_aliases
+      # export CTFTOOLS=~/ctf-tools
+      echo "[*] Initialization complete."
