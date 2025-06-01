@@ -224,6 +224,8 @@ for tool in "${FAILED_TOOLS[@]}"; do
 done
 echo "========================================"
 echo
+echo "For legal, educational, and ethical use only. The Trave Tricksters Legion and script contributors take no responsibility for misuse."
+echo
 echo "installation finished"
 
 cat <<'EOF'
