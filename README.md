@@ -1,6 +1,6 @@
 # Trave Tricksters Legion - CTF Auto-Installer
 
-<img src="/img/logo.png" alt="Trave Tricksters Legion Logo" width="120" height="120" />
+![TTL Logo](ttl_logo.png)
 
 **Author: skull**
 ---
