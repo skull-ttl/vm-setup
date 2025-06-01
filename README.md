@@ -2,7 +2,6 @@
 
 ![TTL Logo](ttl_logo.png)
 
-**Author: skull**
 ---
 
 A **no-nonsense, modern Bash auto-installer** for CTF, pentest, and hacking environments.  
