@@ -28,9 +28,19 @@ else
 fi
 # ---- RustDesk Install ----
 echo "[*] Installing RustDesk..."
-RUSTDESK_VERSION=$(curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest | grep tag_name | cut -d '"' -f 4 | sed 's/v//g')
-wget "https://github.com/rustdesk/rustdesk/releases/download/${RUSTDESK_VERSION}/rustdesk-${RUSTDESK_VERSION}-amd64.deb" -O /tmp/rustdesk.deb
-apt install -y /tmp/rustdesk.deb
+# Get the latest .deb release URL from the GitHub API
+RUSTDESK_DEB_URL=$(curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest | \
+  grep browser_download_url | \
+  grep amd64.deb | \
+  cut -d '"' -f 4 | head -n 1)
+
+if [ -z "$RUSTDESK_DEB_URL" ]; then
+    echo "[!] Failed to find RustDesk .deb for amd64 architecture. Please check the RustDesk releases page."
+    exit 1
+fi
+
+wget "$RUSTDESK_DEB_URL" -O /tmp/rustdesk.deb
+sudo apt install -y /tmp/rustdesk.deb
 rm /tmp/rustdesk.deb
 echo "[*] RustDesk installed. You can launch it with 'rustdesk &' or configure headless."
 echo "[*] Setting up Proxychains4..."
