@@ -114,5 +114,15 @@ The Trave Tricksters Legion and script contributors take **no responsibility for
 
 ---
 
+## Contributing & Issues
+
+This is a side project / portfolio tool.  
+If you run into problems or have suggestions, please email:
+
+📧 skull@ttl.zip
+
+Issues and PRs are welcome, but response times may vary.
+
+
 **Happy hacking!**  
 *— The Trave Tricksters Legion CTF Team*
