@@ -1,4 +1,7 @@
 # Trave Tricksters Legion - CTF Auto-Installer
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![Shell: bash](https://img.shields.io/badge/Shell-bash-4EAA25)
+![OS: Ubuntu/Debian](https://img.shields.io/badge/OS-Ubuntu%2FDebian-informational)
 
 ![TTL Logo](ttl_logo.png)
 
